@@ -4,4 +4,4 @@
 
 {% for post in site.posts %}
 - [{{ post.title }}]({{ post.url }})
-{$ end for %}
+{% end for %}
