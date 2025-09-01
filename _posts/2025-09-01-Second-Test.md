@@ -14,8 +14,13 @@ How should I know.  I'm just making this up as I go along
 
 ### Related Content
 
-{% for tag in page.tags %}
-{% for post in tag %}
-- {{ post.title }} ({{ post.date }})
+{% for tag in site.tags %}
+{% assign t = tag | first %}
+{% assign posts = tag | last %}
+{% if post.tags contains t %}
+{% for post in posts %}
+- [{{ post.title }}]({{ post.utl }}) ({{ post.date }})
 {% endfor %}
+{% endif %}
 {% endfor %}
+
