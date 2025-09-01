@@ -5,7 +5,7 @@
 {% for post in site.posts %}
 [{{ post.title }}]({{ post.url }}) {{ post.date }}
 {{ post.excerpt }}
-{% for cat in post.categories %} {{ cat }} {% endfor %}
+{% for tag in post.tags %} {{ tag }} {% endfor %}
 
 
 {% endfor %}
