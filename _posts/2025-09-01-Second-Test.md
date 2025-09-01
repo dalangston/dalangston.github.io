@@ -11,3 +11,11 @@ I don't know either, and we probably wont' find out tody
 
 ## Well what is it then?
 How should I know.  I'm just making this up as I go along
+
+### Related Content
+
+{% for tag in page.tags %}
+{% for post in tag %}
+- {{ post.title }} ({{ post.date }})
+{% endfor %}
+{% endfor %}
