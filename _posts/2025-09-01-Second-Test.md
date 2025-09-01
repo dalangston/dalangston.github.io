@@ -17,10 +17,11 @@ How should I know.  I'm just making this up as I go along
 {% for tag in site.tags %}
 {% assign t = tag | first %}
 {% assign posts = tag | last %}
-{% if post.tags contains t %}
-{% for post in posts %}
-- [{{ post.title }}]({{ post.utl }}) ({{ post.date }})
-{% endfor %}
+{% if page.tags contains t %}
+{{ t }}
+{{ posts }}
 {% endif %}
+
+
 {% endfor %}
 
